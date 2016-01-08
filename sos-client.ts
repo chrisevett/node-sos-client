@@ -59,6 +59,9 @@ function poll(callback: (err?: Error) => void, startupData: IStartupData): void 
            case 'teamcity':
                build.plugin = new TeamCity.TeamCity();
                break;
+           case 'octopus':
+               build.plugin = new Octopus.Octopus();
+               break;
            default:
                return callback(new Error("Invalid build type: " + build.type));
        }
