@@ -1,14 +1,14 @@
 {
     "builds": [
-        {
-            "type": "bamboo",
-            "config": {
-                "url": "https://bamboo.example.com/rest/api/latest/result/BUILDNAME-BUILDPLAN.json?max-results=1",
-                "username": "<username>",
-                "password": "<password>"
-            }
+      {
+        "type": "bamboo",
+        "config": {
+          "url": "https://bamboo.example.com/rest/api/latest/result/BUILDNAME-BUILDPLAN.json?max-results=1",
+          "username": "<username>",
+          "password": "<password>"
         }
-/*
+      }
+      /*
         {
             "type": "teamcity",
             "config": {
@@ -23,6 +23,13 @@
                 "url": "http://127.0.0.1/jenkins/api/json/",
                 "username": "[username]",
                 "password": "[password]"
+            }
+        },
+        {
+            "type": "octopus",
+            "config": {
+                "baseUrl": "http://myOctopusMachine:1234/",
+                "apiKey": "API-MYAPIKEY"
             }
         }
 */

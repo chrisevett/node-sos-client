@@ -8,6 +8,7 @@ var PluginBase = require('./plugin');
 var Bamboo = require('./plugins/bamboo');
 var Jenkins = require('./plugins/jenkins');
 var TeamCity = require('./plugins/teamcity');
+var Octopus = require('./plugins/octopus');
 
 var useMockDevice = false;
 
@@ -38,6 +39,9 @@ function poll(callback, startupData) {
                 break;
             case 'teamcity':
                 build.plugin = new TeamCity.TeamCity();
+                break;
+            case 'octopus':
+                build.plugin = new Octopus.Octopus();
                 break;
             default:
                 return callback(new Error("Invalid build type: " + build.type));

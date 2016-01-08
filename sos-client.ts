@@ -9,6 +9,7 @@ import PluginBase = require('./plugin');
 import Bamboo = require('./plugins/bamboo');
 import Jenkins = require('./plugins/jenkins');
 import TeamCity = require('./plugins/teamcity');
+import Octopus = require('./plugins/octopus');
 
 var useMockDevice: boolean = false;
 
